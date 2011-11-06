@@ -8,6 +8,7 @@ gem 'rails', '3.1.1'
 gem 'mongo_mapper'
 gem 'bson_ext'
 gem 'therubyracer'
+gem 'formtastic'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -46,4 +47,5 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'ruby-debug19'
 end
