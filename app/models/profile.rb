@@ -11,5 +11,13 @@ class Profile
   validates :url, :uri => { :format => /(^$)|(^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$)/ix }
 
   timestamps!
+  
+  def as_json(options={})
+    json_achievements = {}
+    achievements.each do |achievement|
+      json_achievements[achievement["_type"].downcase] = achievement
+    end
+    super.merge(:achievements => json_achievements)
+  end
 
 end
