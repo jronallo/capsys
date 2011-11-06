@@ -1,13 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Profile:</b>
-  <%= link_to @profile.name, @profile %>
-</p>
+<h2><%= link_to @profile.name, @profile %></h2>
 
 <p>
-  <b>Url:</b>
-  <%= @sitemap.url %>
+  <b>Sitemap URL:</b>
+  <%= link_to @sitemap.url, @sitemap.url %>
 </p>
 
 <p>

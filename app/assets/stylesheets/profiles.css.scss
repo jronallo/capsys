@@ -2,11 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{background-color: #749BAF;}
+body{background-color: #749BAF;margin:auto;}
 
 #main {
   background-color: white;
-  margin: 20px 20px;
+  margin-top: 20px;
   padding: 20px;
   border: 2px solid black;
+  
+  #sidebar {
+    background-color: #D6D6D6; 
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
 }
