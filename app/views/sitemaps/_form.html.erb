@@ -1,0 +1,22 @@
+<%= semantic_form_for [@profile, @sitemap], :url => profile_sitemap_path  do |f| %>
+  <% if @sitemap.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitemap.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @sitemap.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.inputs do %>
+    <%= f.input :url %>
+    <%#= f.input :valid %>
+  <% end %>
+
+  <%= f.buttons do %>
+    <%= f.commit_button %>
+  <% end %>
+<% end %>

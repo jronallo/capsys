@@ -1,5 +1,9 @@
 DplaCaps::Application.routes.draw do
-  resources :profiles
+  
+
+  resources :profiles do
+    resource :sitemap    
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

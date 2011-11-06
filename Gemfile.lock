@@ -201,6 +201,7 @@ DEPENDENCIES
   jquery-rails
   mongo_mapper
   nifty-generators
+  nokogiri
   rails (= 3.1.1)
   rspec
   rspec-rails

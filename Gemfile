@@ -9,6 +9,7 @@ gem 'mongo_mapper'
 gem 'bson_ext'
 gem 'therubyracer'
 gem 'formtastic'
+gem 'nokogiri'
 
 # Gems used only for assets and not required
 # in production environments by default.

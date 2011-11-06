@@ -15,6 +15,21 @@
   <%= @profile.description %>
 </p>
 
+<h2>Current Achievements</h2>
+<ul>
+  <% @profile.achievements.each do |achievement| %>
+    <li><%= link_to achievement.class.to_s, send("profile_#{achievement.class.to_s.parameterize}_path", @profile) %></li>
+  <% end -%>
+</ul>
+
+<h2>Possible Achievements</h2>
+<ul>
+  <% Achievement.subclasses.each do |klazz| %>
+    <% if !@profile.send(klazz.to_s.parameterize) %>
+    <li><%= link_to klazz.to_s, send("new_profile_#{klazz.to_s.parameterize}_path", @profile) %></li>
+    <% end -%>
+  <% end -%>
+</ul>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'All Profiles', profiles_path %>

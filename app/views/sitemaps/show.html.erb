@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Profile:</b>
+  <%= link_to @profile.name, @profile %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @sitemap.url %>
+</p>
+
+<p>
+  <b>Valid:</b>
+  <%= @sitemap.valid_sitemap %>
+</p>
+
+<%= link_to 'Edit', edit_profile_sitemap_path(@profile) %> |
+<%= link_to 'Back to Profile', profile_path(@profile) %>
+<%= button_to "Destroy", {:action => :destroy, :id => @sitemap.id}, 
+            :class => 'destroy', :method => :delete %>
