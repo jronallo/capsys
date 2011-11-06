@@ -4,19 +4,13 @@
   <tr>
     <th>Name</th>
     <th>Url</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @profiles.each do |profile| %>
   <tr>
     <td><%= link_to profile.name, profile %></td>
     <td><%= profile.url %></td>
-    <td><%= profile.description %></td>
-    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-    <td><%= link_to 'Destroy', profile, confirm: 'Are you sure?', method: :delete %></td>
+    <%#= link_to 'Destroy', profile, confirm: 'Are you sure?', method: :delete %>
   </tr>
 <% end %>
 </table>
