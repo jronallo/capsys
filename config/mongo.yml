@@ -12,7 +12,7 @@ test:
 
 # set these environment variables on your prod server
 production:
-  <<: *defaults
+  uri: <%= ENV['MONGOLAB_URI'] %>
   database: dpla_caps
-  username: <%= ENV['MONGO_USERNAME'] %>
-  password: <%= ENV['MONGO_PASSWORD'] %>
+  #username: <%= ENV['MONGO_USERNAME'] %>
+  #password: <%= ENV['MONGO_PASSWORD'] %>
