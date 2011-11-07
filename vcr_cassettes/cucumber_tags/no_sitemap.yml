@@ -1,0 +1,20 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://example.org:80/collection
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 302
+      message: Found
+    headers:
+      location:
+      - http://www.iana.org/domains/example/
+      server:
+      - BigIP
+      content-length:
+      - '0'
+    body: !!null 
+    http_version: '1.0'

@@ -1,0 +1,249 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://d.lib.ncsu.edu:80/collections
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 07 Nov 2011 21:04:08 GMT
+      server:
+      - Apache/2.2.15 (Red Hat) mod_ssl/2.2.15 OpenSSL/1.0.0-fips Phusion_Passenger/3.0.7
+        PHP/5.3.3 mod_perl/2.0.4 Perl/v5.10.1
+      x-powered-by:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.7
+      etag:
+      - ! '"2e62b762adff8bfe109de918e29a2c64"'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      x-rack-cache:
+      - miss
+      x-runtime:
+      - '0.291674'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _sal_session=BAh7CCIMaGlzdG9yeVsAIg9zZXNzaW9uX2lkIiU5OGRmNTJlNmNjYmVjYzdjYjA1MGRiZDFmZTgxZTMxMyILc2VhcmNoewg6D2NvbnRyb2xsZXIiDGNhdGFsb2c6CnRvdGFsaQKzyToLYWN0aW9uIgppbmRleA%3D%3D--47156c619a2c4266d0cda51f82f1499769020836;
+        path=/; HttpOnly
+      content-length:
+      - '19362'
+      status:
+      - '200'
+      content-type:
+      - text/html; charset=utf-8
+    body: ! "\t<!DOCTYPE html>\n<html>\n\n  <head>\n    \n    <meta http-equiv=\"Content-Type\"
+      content=\"text/html; charset=utf-8\" />\n    <meta http-equiv=\"X-UA-Compatible\"
+      content=\"IE=edge,chrome=1\">\n    \n    \n    <title>NCSU Libraries' Digital
+      Collections: Rare and Unique Materials</title>\n    <!--<link href=\"/collections/catalog/opensearch\"
+      title=\"NCSU Libraries' Digital Collections: Rare and Unique Materials\" type=\"application/opensearchdescription+xml\"
+      rel=\"search\"/>%>-->\n    \n    \n        \n    <link href=\"/collections/assets/application-75dccfd39ed7de61a78dc325b7634a16.css\"
+      media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/collections/assets/application-9e6044426f8e7b339d2b6745ee5805ed.js\"
+      type=\"text/javascript\"></script>\n        \n    \n    \n    \n      \n    <script
+      type=\"text/javascript\">\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount',
+      'UA-12189727-7']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var
+      ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+      = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);\n  })();\n\n</script>\n  <script type=\"text/javascript\">var
+      NREUMQ=[];NREUMQ.push([\"mark\",\"firstbyte\",new Date().getTime()]);</script></head>\n
+      \   <body onload=\"$('input#q').focus();\" class=\"homepage blacklight-catalog
+      blacklight-catalog-index\" \n       itemscope itemtype=\"http://schema.org/SearchResultsPage\"
+      >\n    \n    <div id=\"outer-head-container\">\n      <div id=\"ncsu_branding_container\">\n\t<div
+      id=\"ncsu_branding\" class=\"container_16\"> \n    <a href=\"http://www.ncsu.edu\">\n
+      \     <img id=\"ncsu_logo\" \n        src=\"http://www.lib.ncsu.edu/website/images/ncsu_logo.png\"
+      alt=\"NCSU Logo\">\n    </a>\n\t    <ul>\n\t      <li class=\"first\"><a href=\"http://www.ncsu.edu/directory/\">directory</a></li>\n\t
+      \     <li><a href=\"http://www.lib.ncsu.edu/\">libraries</a></li>\n\t      <li><a
+      href=\"http://mypack.ncsu.edu/\">mypack portal</a></li>\n\t      <li><a href=\"http://www.ncsu.edu/campus_map/\">campus
+      map</a></li>\n\t      <li><a href=\"http://search.ncsu.edu/\">search NCSU</a></li>\n\t
+      \   </ul>\n\t  </div>\n</div>\n      \n<div id=\"head_container\">\n <div id=\"head_banner\">\n
+      \   <div id=\"libraries_title\"> \n      <a href=\"http://www.lib.ncsu.edu/\">\n
+      \       <img src=\"http://www.lib.ncsu.edu/website/images/logo_80_percent.png\"
+      \n          alt=\"NCSU Libraries\" width=\"254\" height=\"39\"></a>\n    </div>
+      \n  \n  </div>\n  \n</div><!-- end head banner-->\n\n    </div>\n  \n      <div
+      id=\"doc4\" class=\"yui-t2\">\n        <div id=\"global_nav\">\n  <div id=\"inner_global_nav\">\n
+      \   <ul>\n        <li><a href=\"http://www.lib.ncsu.edu/digitalcollections/\">Digital
+      Collections</a></li>\n        <li><a href=\"/collections/about\">About</a></li>\n
+      \   </ul>\n  </div>\n</div>\n      <div id=\"buffer_container\">\n\t    <div
+      id=\"hd\">        \n        \n            <h1 class=\"site_title\">\n              <a
+      href=\"/collections/\" title=\"NCSU Libraries' Digital Collections: Rare and
+      Unique Materials Home\">NCSU Libraries' Digital Collections: <span>Rare and
+      Unique Materials</span></a>\n                <span id='results_text'>Search
+      Results</span>\n            </h1>\n          \n          \n      </div>\n      \n\t
+      \   <div id=\"bd\">  \n        \n      \t<div id=\"yui-main\">\n          <div
+      class=\"yui-b\">\n            \n            \n\t<div id=\"search\" class=\"search\">\n
+      \ <form accept-charset=\"UTF-8\" action=\"/collections/catalog\" method=\"get\"><div
+      style=\"margin:0;padding:0;display:inline\"><input name=\"utf8\" type=\"hidden\"
+      value=\"&#x2713;\" /></div>\n    <h2 class=\"search\"><label for=\"q\">Search
+      </label></h2>\n    <input class=\"q\" id=\"q\" name=\"q\" type=\"text\" />\n
+      \   <label for=\"search_field\"> in </label>\n    <select class=\"search_field\"
+      id=\"search_field\" name=\"search_field\" title=\"Targeted search options\"><option
+      value=\"all_fields\">All Fields</option>\n<option value=\"title\">Title</option>\n<option
+      value=\"building\">Building</option></select>\n    \n            \n    \n    <input
+      class=\"submit\" name=\"commit\" type=\"submit\" value=\"search\" />\n</form>\n
+      \ <hr/>\n</div>\n\n<div id=\"home_text\">\n\n  <a href=\"/collections/catalog?f%5Bispartof_facet%5D%5B%5D=University+Archives+Photographs\"><img
+      alt=\"Sal-uapc\" src=\"/collections/assets/sal-uapc-411b9c7af75ae02b069b0c1571d9813f.jpg\"
+      /></a>\n  \n  <p>\n  The NCSU Libraries' Digital Collections: Rare and Unique
+      Materials serves as a \n  gateway to tens of thousands of images, text, and
+      digital media from its rich \n  holdings. From the history of NC State to the
+      history of North Carolina's built \n  environment, these digital collections
+      provide network access to collections that \n  drive research, highlight innovation,
+      and inspire learning.\n  </p>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n          </div>\n
+      \       </div>        \n        <div class=\"yui-b sidebar\">  <div id=\"facets\"
+      class=\"facets\">\n  <h2>Refine your search</h2>\n\t  <div class=\"facet_limit
+      blacklight-ispartof_facet\">\n         \n          <h3>Collection</h3>\n        <ul>\n
+      \           <li>\n                <a href=\"/collections/catalog?f%5Bispartof_facet%5D%5B%5D=University+Archives+Photographs\"
+      class=\"facet_select label\">University Archives Photographs</a>&nbsp;<span
+      class=\"count\">(23,856)</span>              \n            </li>\n            <li>\n
+      \               <a href=\"/collections/catalog?f%5Bispartof_facet%5D%5B%5D=Beaux+Arts+to+Modernism\"
+      class=\"facet_select label\">Beaux Arts to Modernism</a>&nbsp;<span class=\"count\">(9,006)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bispartof_facet%5D%5B%5D=Built+Heritage\"
+      class=\"facet_select label\">Built Heritage</a>&nbsp;<span class=\"count\">(8,544)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bispartof_facet%5D%5B%5D=Funkhouser+Photographs\"
+      class=\"facet_select label\">Funkhouser Photographs</a>&nbsp;<span class=\"count\">(6,267)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bispartof_facet%5D%5B%5D=Green+%27N%27+Growing\"
+      class=\"facet_select label\">Green 'N' Growing</a>&nbsp;<span class=\"count\">(3,911)</span>
+      \             \n            </li>\n          \n            <li class=\"more_facets_link\"><a
+      href=\"/collections/catalog/facet/ispartof_facet\" class=\"more_facets_link\">more
+      »</a></li>\n          \n        </ul>\n   \n\n    </div>\n\t  <div class=\"facet_limit
+      blacklight-location_facet\">\n         \n          <h3>Location</h3>\n        <ul>\n
+      \           <li>\n                <a href=\"/collections/catalog?f%5Blocation_facet%5D%5B%5D=Raleigh+%28N.C%29\"
+      class=\"facet_select label\">Raleigh (N.C)</a>&nbsp;<span class=\"count\">(19,540)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Blocation_facet%5D%5B%5D=North+Carolina\"
+      class=\"facet_select label\">North Carolina</a>&nbsp;<span class=\"count\">(2,766)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Blocation_facet%5D%5B%5D=Charlotte+%28N.C.%29\"
+      class=\"facet_select label\">Charlotte (N.C.)</a>&nbsp;<span class=\"count\">(2,301)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Blocation_facet%5D%5B%5D=Asheville+%28N.C.%29+\"
+      class=\"facet_select label\">Asheville (N.C.) </a>&nbsp;<span class=\"count\">(1,507)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Blocation_facet%5D%5B%5D=Winston-Salem+%28N.C.%29\"
+      class=\"facet_select label\">Winston-Salem (N.C.)</a>&nbsp;<span class=\"count\">(882)</span>
+      \             \n            </li>\n          \n            <li class=\"more_facets_link\"><a
+      href=\"/collections/catalog/facet/location_facet\" class=\"more_facets_link\">more
+      »</a></li>\n          \n        </ul>\n   \n\n    </div>\n\t  <div class=\"facet_limit
+      blacklight-work_facet\">\n         \n          <h3>Buildings</h3>\n        <ul>\n
+      \           <li>\n                <a href=\"/collections/catalog?f%5Bwork_facet%5D%5B%5D=Hillsborough+Street\"
+      class=\"facet_select label\">Hillsborough Street</a>&nbsp;<span class=\"count\">(2,072)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bwork_facet%5D%5B%5D=Free+Expression+Tunnel\"
+      class=\"facet_select label\">Free Expression Tunnel</a>&nbsp;<span class=\"count\">(714)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bwork_facet%5D%5B%5D=Reynolds%2C+William+Neal+Coliseum\"
+      class=\"facet_select label\">Reynolds, William Neal Coliseum</a>&nbsp;<span
+      class=\"count\">(339)</span>              \n            </li>\n            <li>\n
+      \               <a href=\"/collections/catalog?f%5Bwork_facet%5D%5B%5D=SAS+Hall\"
+      class=\"facet_select label\">SAS Hall</a>&nbsp;<span class=\"count\">(308)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bwork_facet%5D%5B%5D=Centennial+Campus\"
+      class=\"facet_select label\">Centennial Campus</a>&nbsp;<span class=\"count\">(243)</span>
+      \             \n            </li>\n          \n            <li class=\"more_facets_link\"><a
+      href=\"/collections/catalog/facet/work_facet\" class=\"more_facets_link\">more
+      »</a></li>\n          \n        </ul>\n   \n\n    </div>\n\t  <div class=\"facet_limit
+      blacklight-subject_facet\">\n         \n          <h3>Subject</h3>\n        <ul>\n
+      \           <li>\n                <a href=\"/collections/catalog?f%5Bsubject_facet%5D%5B%5D=Houses\"
+      class=\"facet_select label\">Houses</a>&nbsp;<span class=\"count\">(8,607)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bsubject_facet%5D%5B%5D=Single-family+dwellings\"
+      class=\"facet_select label\">Single-family dwellings</a>&nbsp;<span class=\"count\">(7,474)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bsubject_facet%5D%5B%5D=Universities+and+colleges\"
+      class=\"facet_select label\">Universities and colleges</a>&nbsp;<span class=\"count\">(4,624)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bsubject_facet%5D%5B%5D=Construction\"
+      class=\"facet_select label\">Construction</a>&nbsp;<span class=\"count\">(3,933)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bsubject_facet%5D%5B%5D=Floor+plans\"
+      class=\"facet_select label\">Floor plans</a>&nbsp;<span class=\"count\">(3,786)</span>
+      \             \n            </li>\n          \n            <li class=\"more_facets_link\"><a
+      href=\"/collections/catalog/facet/subject_facet\" class=\"more_facets_link\">more
+      »</a></li>\n          \n        </ul>\n   \n\n    </div>\n\t  <div class=\"facet_limit
+      blacklight-names_facet\">\n         \n          <h3>Names</h3>\n        <ul>\n
+      \           <li>\n                <a href=\"/collections/catalog?f%5Bnames_facet%5D%5B%5D=Funkhouser%2C+Edward+T.\"
+      class=\"facet_select label\">Funkhouser, Edward T.</a>&nbsp;<span class=\"count\">(6,267)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bnames_facet%5D%5B%5D=North+Carolina+State+University\"
+      class=\"facet_select label\">North Carolina State University</a>&nbsp;<span
+      class=\"count\">(5,518)</span>              \n            </li>\n            <li>\n
+      \               <a href=\"/collections/catalog?f%5Bnames_facet%5D%5B%5D=Asbury%2C+Louis\"
+      class=\"facet_select label\">Asbury, Louis</a>&nbsp;<span class=\"count\">(2,675)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bnames_facet%5D%5B%5D=North+Carolina+State+University.+College+of+Engineering\"
+      class=\"facet_select label\">North Carolina State University. College of Engineering</a>&nbsp;<span
+      class=\"count\">(2,616)</span>              \n            </li>\n            <li>\n
+      \               <a href=\"/collections/catalog?f%5Bnames_facet%5D%5B%5D=Northup+%26+O%27Brien\"
+      class=\"facet_select label\">Northup &amp; O'Brien</a>&nbsp;<span class=\"count\">(2,402)</span>
+      \             \n            </li>\n          \n            <li class=\"more_facets_link\"><a
+      href=\"/collections/catalog/facet/names_facet\" class=\"more_facets_link\">more
+      »</a></li>\n          \n        </ul>\n   \n\n    </div>\n\t  <div class=\"facet_limit
+      blacklight-format\">\n         \n          <h3>Format</h3>\n        <ul>\n            <li>\n
+      \               <a href=\"/collections/catalog?f%5Bformat%5D%5B%5D=Still+image\"
+      class=\"facet_select label\">Still image</a>&nbsp;<span class=\"count\">(41,026)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bformat%5D%5B%5D=Drawing\"
+      class=\"facet_select label\">Drawing</a>&nbsp;<span class=\"count\">(8,412)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bformat%5D%5B%5D=Text\"
+      class=\"facet_select label\">Text</a>&nbsp;<span class=\"count\">(2,181)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bformat%5D%5B%5D=Folder\"
+      class=\"facet_select label\">Folder</a>&nbsp;<span class=\"count\">(6)</span>
+      \             \n            </li>\n          \n          \n        </ul>\n   \n\n
+      \   </div>\n\t  <div class=\"facet_limit blacklight-genre_facet\">\n         \n
+      \         <h3>Genre</h3>\n        <ul>\n            <li>\n                <a
+      href=\"/collections/catalog?f%5Bgenre_facet%5D%5B%5D=Photographs\" class=\"facet_select
+      label\">Photographs</a>&nbsp;<span class=\"count\">(20,711)</span>              \n
+      \           </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bgenre_facet%5D%5B%5D=Architectural+drawings\"
+      class=\"facet_select label\">Architectural drawings</a>&nbsp;<span class=\"count\">(11,192)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bgenre_facet%5D%5B%5D=Design+and+construction+documents\"
+      class=\"facet_select label\">Design and construction documents</a>&nbsp;<span
+      class=\"count\">(8,467)</span>              \n            </li>\n            <li>\n
+      \               <a href=\"/collections/catalog?f%5Bgenre_facet%5D%5B%5D=Architectural+photographs\"
+      class=\"facet_select label\">Architectural photographs</a>&nbsp;<span class=\"count\">(7,920)</span>
+      \             \n            </li>\n            <li>\n                <a href=\"/collections/catalog?f%5Bgenre_facet%5D%5B%5D=Portrait+photographs\"
+      class=\"facet_select label\">Portrait photographs</a>&nbsp;<span class=\"count\">(3,430)</span>
+      \             \n            </li>\n          \n            <li class=\"more_facets_link\"><a
+      href=\"/collections/catalog/facet/genre_facet\" class=\"more_facets_link\">more
+      »</a></li>\n          \n        </ul>\n   \n\n    </div>\n</div>\n\n</div>        \n\t
+      \   </div>\n    </div>\n      \n\t    <div id=\"ft\"><div id=\"footer\">\n  <div
+      id=\"footer-left\" class=\"grid_11\">\n    <p> <strong>NCSU LIBRARIES</strong>
+      2 Broughton Drive, Raleigh, NC 27695-7111 (919) 515-3364  \n      | <a href=\"http://www.lib.ncsu.edu/contact\"
+      onclick=\"_gaq.push(['_trackEvent', 'Footer', 'Internal Link', 'Contact Us']);\">Contact
+      Us</a> </p>\n    <p> <a href=\"http://www.lib.ncsu.edu/copyright\" onclick=\"_gaq.push(['_trackEvent',
+      'Footer', 'Internal Link', 'Copyright']);\">Copyright</a> | <a href=\"http://www.lib.ncsu.edu/disability-services\"
+      onclick=\"_gaq.push(['_trackEvent', 'Footer', 'Internal Link', 'Disability Services']);\">Disability
+      Services</a> | <a href=\"http://www.lib.ncsu.edu/privacy\" onclick=\"_gaq.push(['_trackEvent',
+      'Footer', 'Internal Link', 'Privacy Statement']);\">Privacy Statement</a> |
+      <a href=\"http://staff.lib.ncsu.edu\" onclick=\"_gaq.push(['_trackEvent', 'Footer',
+      'Internal Link', 'Staff Only']);\">Staff Only</a></p>\n    <p> <a href=\"http://www.lib.ncsu.edu/\"
+      onclick=\"_gaq.push(['_trackEvent', 'Footer', 'Internal Link', 'D. H. Hill Library
+      (Homepage)']);\">D. H. Hill Library</a> | <a href=\"http://www.lib.ncsu.edu/huntlibrary\"
+      onclick=\"_gaq.push(['_trackEvent', 'Footer', 'Subsite Entrance', 'Hunt']);\">Hunt
+      Library</a> | <a href=\"http://www.lib.ncsu.edu/design\" onclick=\"_gaq.push(['_trackEvent',
+      'Footer', 'Subsite Entrance', 'Design Library']);\">Design Library</a> | <a
+      href=\"http://www.lib.ncsu.edu/nrl\" onclick=\"_gaq.push(['_trackEvent', 'Footer',
+      'Subsite Entrance', 'Natural Resources Library']);\">Natural Resources Library</a>
+      | <a href=\"http://www.lib.ncsu.edu/textiles\" onclick=\"_gaq.push(['_trackEvent',
+      'Footer', 'Subsite Entrance', 'Textiles Library']);\">Textiles Library</a> |
+      <a href=\"http://www.lib.ncsu.edu/vetmed\" onclick=\"_gaq.push(['_trackEvent',
+      'Footer', 'Subsite Entrance', 'Veterinary Medicine Library']);\">Veterinary
+      Medicine Library</a></p>\n  </div>\n  <div id=\"footer-social\" class=\"grid_3\">\n
+      \   <ul>\n      <li> <a href=\"http://twitter.lib.ncsu.edu\" class=\"twitter\"
+      title=\"twitter\" onclick=\"_gaq.push(['_trackEvent', 'Footer', 'External Link',
+      'Twitter']);\"><img src=\"http://www.lib.ncsu.edu/website/images/twitter.png\"
+      alt=\"twitter\" width=\"24\" height=\"24\"></a> \n          <a href=\"http://www.facebook.com/pages/NCSU-Libraries/139176312767893?ref=search\"
+      class=\"facebook\" title=\"facebook\" onclick=\"_gaq.push(['_trackEvent', 'Footer',
+      'External Link', 'Facebook']);\"><img src=\"http://www.lib.ncsu.edu/website/images/facebook.png\"
+      alt=\"facebook\" width=\"24\" height=\"24\"></a> \n          <a href=\"http://www.lib.ncsu.edu/rss-feeds\"
+      class=\"rss\" title=\"rss feeds\" onclick=\"_gaq.push(['_trackEvent', 'Footer',
+      'Internal Link', 'RSS']);\"><img src=\"http://www.lib.ncsu.edu/website/images/feed.png\"
+      alt=\"rss feeds\" width=\"24\" height=\"24\"></a> \n          <a href=\"http://www.youtube.com/view_play_list?p=D55CB2CA2013ACF8\"
+      class=\"youtube\" title=\"youtube\" onclick=\"_gaq.push(['_trackEvent', 'Footer',
+      'External Link', 'YouTube']);\"><img src=\"http://www.lib.ncsu.edu/website/images/youtube.png\"
+      alt=\"youtube\" width=\"24\" height=\"24\"></a> \n          <a href=\"http://flickr.com/photos/ncsu_scrc/\"
+      class=\"flickr\" title=\"flickr\" onclick=\"_gaq.push(['_trackEvent', 'Footer',
+      'External Link', 'Flickr']);\"><img src=\"http://www.lib.ncsu.edu/website/images/flickr.png\"
+      alt=\"flickr\" width=\"24\" height=\"24\"></a> </li>\n    </ul>\n    \n   <a
+      href=\"http://www.lib.ncsu.edu/giving\" onclick=\"_gaq.push(['_trackEvent',
+      'Footer', 'Subsite Entrance', 'Giving']);\"><img src=\"http://www.lib.ncsu.edu/website/images/giving.png\"
+      title=\"giving to the libraries\" alt=\"giving to the libraries\" width=\"182\"
+      height=\"31\"></a>\n  </div>\n  <div>\n  \n    <div class=\"clear\">&nbsp;</div>\n
+      \ </div>\n  <!-- close footer -->\n</div></div>\n\t  </div>\n    <style type='text/css'>@import
+      url('http://getbarometer.s3.amazonaws.com/assets/barometer/css/barometer.css');</style>\n<script
+      src='http://getbarometer.s3.amazonaws.com/assets/barometer/javascripts/barometer.js'
+      type='text/javascript'></script>\n<script type=\"text/javascript\" charset=\"utf-8\">\n
+      \ BAROMETER.load('pbaXKmeqPRbaPzFE7Wez5');\n</script>\n    <script type=\"text/javascript\">if
+      (!NREUMQ.f) NREUMQ.f=function() {\nNREUMQ.push([\"load\",new Date().getTime()]);\nvar
+      e=document.createElement(\"script\");\ne.type=\"text/javascript\";e.async=true;e.src=\"https://d1ros97qkrwjf5.cloudfront.net/23/eum/rum-staging.js\";\ndocument.body.appendChild(e);\nif(NREUMQ.a)NREUMQ.a();\n};\nif(window.onload!==NREUMQ.f){NREUMQ.a=window.onload;window.onload=NREUMQ.f;};\nNREUMQ.push([\"nrf2\",\"beacon-1.newrelic.com\",\"d957335f7e\",380126,\"JVdeQUBYX1hSSk5RVBJZXFpVGFpaU10Z\",0,289,new
+      Date().getTime()])</script></body>\n    \n    </html>\n"
+    http_version: '1.1'

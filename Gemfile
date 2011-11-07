@@ -40,6 +40,9 @@ end
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'vcr'
+  gem 'fakeweb'
+  gem 'launchy'
 end
 
 group :test, :development do

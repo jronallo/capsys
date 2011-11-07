@@ -1,0 +1,33 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://d.lib.ncsu.edu:80/collections/sal-sitemap.xml
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 07 Nov 2011 21:53:50 GMT
+      server:
+      - Apache/2.2.15 (Red Hat) mod_ssl/2.2.15 OpenSSL/1.0.0-fips Phusion_Passenger/3.0.7
+        PHP/5.3.3 mod_perl/2.0.4 Perl/v5.10.1
+      last-modified:
+      - Fri, 04 Nov 2011 19:34:53 GMT
+      etag:
+      - ! '"526092-185-4b0edcc9d2949"'
+      accept-ranges:
+      - bytes
+      content-length:
+      - '389'
+      content-type:
+      - text/xml
+    body: ! "<?xml version=\"1.0\"?>\n<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n
+      \ <sitemap>\n    <loc>http://d.lib.ncsu.edu/collections/sal-sitemap0.xml.gz</loc>\n
+      \   <lastmod>2011-10-06T02:18:25.967Z</lastmod>\n  </sitemap>\n  <sitemap>\n
+      \   <loc>http://d.lib.ncsu.edu/collections/sal-sitemap1.xml.gz</loc>\n    <lastmod>2011-11-03T21:23:51.282Z</lastmod>\n
+      \ </sitemap>\n</sitemapindex>\n"
+    http_version: '1.1'
