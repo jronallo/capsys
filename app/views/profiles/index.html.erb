@@ -1,21 +1,23 @@
-<h1>Collection Profiles</h1>
+<h2>Collection Profiles</h2>
 
-<%= @profiles.length %>
+<div>
+<%= @profiles.length %> total Collection Profiles.
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Url</th>
-  </tr>
+<div id="profiles">
+  <% @profiles.each do |profile| %>
+    <div class="profile">
+      <h3><%= link_to profile.name, profile %></h3>
+      <div><%= link_to truncate(profile.url, :length => 50), profile.url, :title => profile.url %></div>
+      <% if profile.achievements.count > 0 %>
+        <div><%= profile.achievements.count %> completed achievements.</div>
+      <% end -%>
+      
+      <div><%= truncate(profile.description, :length => 150, :separator => ' ') %></div>
+    </div>
+  <% end %>
+</div>
 
-<% @profiles.each do |profile| %>
-  <tr>
-    <td><%= link_to profile.name, profile %></td>
-    <td><%= profile.url %></td>
-    <%#= link_to 'Destroy', profile, confirm: 'Are you sure?', method: :delete %>
-  </tr>
-<% end %>
-</table>
 
 <br />
 
