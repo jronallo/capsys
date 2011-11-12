@@ -1,25 +1,27 @@
 <h2><%= params[:category] %> Collection Profiles</h2>
 
-<% if @categories %>
-  <div id="categories">
-    <% @categories.each do |category| %>
-      <span class="category">
-        <%= link_to category['_id'], profiles_path(:category => category['_id']) %>&nbsp;(<%= category['value'].to_i %>)  
-      </span>
+<div id="above_results">
+  <div>
+    <% if params[:category]%>
+      <%= @profiles.length %> Collection Profiles in the <span class="current_category"><%= params[:category] %></span> category.
+    <% else %>
+      <%= @profiles.length %> total Collection Profiles.     
     <% end -%>
   </div>
-<% else %>
-  <%= link_to 'See all profiles', profiles_path %>
-<% end -%>
-
-
-<div>
-  <% if params[:category]%>
-    <%= @profiles.length %> Collection Profiles in the <%= params[:category] %> category.
+  
+  <% if @categories %>
+    <div id="categories">
+      <% @categories.each do |category| %>
+        <span class="category">
+          <%= link_to category['_id'], profiles_path(:category => category['_id']) %>&nbsp;(<%= category['value'].to_i %>)  
+        </span>
+      <% end -%>
+    </div>
   <% else %>
-    <%= @profiles.length %> total Collection Profiles.     
+    <%= link_to 'See all profiles', profiles_path %>
   <% end -%>
 </div>
+
 
 <% if true %>
 <div id="profiles">
