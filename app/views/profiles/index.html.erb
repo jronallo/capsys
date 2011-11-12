@@ -21,19 +21,24 @@
   <% end -%>
 </div>
 
+<% if true %>
 <div id="profiles">
   <% @profiles.each do |profile| %>
     <div class="profile">
       <h3><%= link_to profile.name, profile %></h3>
       <div><%= link_to truncate(profile.url, :length => 50), profile.url, :title => profile.url %></div>
-      <% if profile.achievements.count > 0 %>
-        <div><%= profile.achievements.count %> completed <%= profile.achievements.count == 1 ? 'achievement' : 'achievements' %>.</div>
+      <% if profile.achievement_count > 0 %>
+        <div><%= profile.achievement_count %> completed <%= profile.achievement_count == 1 ? 'achievement' : 'achievements' %>.</div>
+      <% end -%>
+      <% if profile.categories.length > 0 %>
+      <div><%= profile.categories.join(', ')%></div>
       <% end -%>
       
       <div><%= truncate(profile.description, :length => 150, :separator => ' ') %></div>
     </div>
   <% end %>
 </div>
+<% end -%>
 
 
 <br />

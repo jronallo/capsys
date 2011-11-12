@@ -3,7 +3,7 @@ module Capsys
     def self.map
       <<-MAP
       function(){
-        this.categories.forEach(function(category){
+        this.categories.forEach(function(category){          
           emit(category, 1);
         });
       }
@@ -12,12 +12,12 @@ module Capsys
   
     def self.reduce 
       <<-REDUCE
-      function(key, values) {
+      function(key, values) {       
         var count = 0;
         
         values.forEach(function(value) {
-          count += 1;
-        });
+          count += value;
+        }); 
         return count;
       }
       REDUCE
@@ -29,8 +29,7 @@ module Capsys
     
     def self.category_list(opts={})
       hash = opts.merge({
-       :out    => {:inline => true},
-       :raw    => true,
+       :out    => {:replace => 'categories'},       
        :query => {:categories => {:$exists => true}}
       })
       self.build(hash).find()

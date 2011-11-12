@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
   # GET /profiles.json
   def index
     if params[:category]
-      @profiles = Profile.find_all_by_categories(params[:category])
+      @profiles = Profile.find_all_by_categories(params[:category], :order => :name)
     else
       category_list
       @profiles = Profile.all(:order => :name)
@@ -91,7 +91,7 @@ class ProfilesController < ApplicationController
   
   def category_list
     # here's where you could also add some filtering or sorting
-    @categories = Capsys::CategoryList.category_list.first.last
+    @categories = Capsys::CategoryList.category_list #.first.last
   end
 
 end

@@ -1,11 +1,14 @@
 class Profile
   include MongoMapper::Document
+  
+  before_save :update_achievement_count
 
   key :name, String,        :required => true
   key :url, String,         :required => true
   key :description, String
   key :imlsdcc_identifier, String
-  key :categories, Array
+  key :categories, Array, :default => ["Unknown"]
+  key :achievement_count, Integer, :default => 0
   
   has_many :achievements
   one :sitemap
@@ -21,6 +24,12 @@ class Profile
       json_achievements[achievement["_type"].downcase] = achievement
     end
     super.merge(:achievements => json_achievements)
+  end
+  
+  private
+  
+  def update_achievement_count
+    self.achievement_count = self.achievements.count
   end
 
 end
