@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h2><%= link_to @profile.name, @profile %></h2>
+
+<p>
+  <b>Updated At:</b>
+  <%= @robotstxt.updated_at %>
+</p>
+
+
+<%= simple_format @robotstxt.text %>
+
+<%= link_to 'Back to Profile', profile_path(@profile) %>
+<%= button_to "Destroy", {:action => :destroy, :id => @robotstxt.id}, 
+            :class => 'destroy', :method => :delete %>
