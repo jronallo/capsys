@@ -10,7 +10,7 @@
       <h3><%= link_to profile.name, profile %></h3>
       <div><%= link_to truncate(profile.url, :length => 50), profile.url, :title => profile.url %></div>
       <% if profile.achievements.count > 0 %>
-        <div><%= profile.achievements.count %> completed achievements.</div>
+        <div><%= profile.achievements.count %> completed <%= profile.achievements.count == 1 ? 'achievement' : 'achievements' %>.</div>
       <% end -%>
       
       <div><%= truncate(profile.description, :length => 150, :separator => ' ') %></div>
