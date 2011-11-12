@@ -2,8 +2,14 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all(:order => :name)
-
+    if params[:category]
+      @profiles = Profile.find_all_by_categories(params[:category])
+    else
+      category_list
+      @profiles = Profile.all(:order => :name)
+    end
+    
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @profiles }
@@ -80,4 +86,12 @@ class ProfilesController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  private
+  
+  def category_list
+    # here's where you could also add some filtering or sorting
+    @categories = Capsys::CategoryList.category_list.first.last
+  end
+
 end

@@ -5,6 +5,7 @@ class Profile
   key :url, String,         :required => true
   key :description, String
   key :imlsdcc_identifier, String
+  key :categories, Array
   
   has_many :achievements
   one :sitemap

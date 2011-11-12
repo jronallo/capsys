@@ -16,6 +16,12 @@ body{background-color: #749BAF;margin:auto;}
     padding: 5px;
   }
   
+  #categories{border: 1px solid black;padding: 10px;}
+  span.category{
+    margin-right: 5px;
+    a{white-space: nowrap;}
+  }
+  
   #profiles {   
     .profile{
       padding-bottom: 20px;

@@ -9,6 +9,13 @@
   <p>
     <%= @profile.description %>
   </p>
+  
+  <ul>
+    <% @profile.categories.each do |category| %>
+      <li><%= link_to category, profiles_path(:category => category) %></li>
+    <% end -%>
+  </ul>
+  
   <%= link_to 'Edit', edit_profile_path(@profile) %> |
   <%= link_to 'All Profiles', profiles_path %>
 </div>

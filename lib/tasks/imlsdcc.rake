@@ -11,30 +11,28 @@ namespace :imlsdcc do
       all_records.flatten!
       puts all_records.length
     end
-    namespaces = {'cld' => "http://purl.org/cld/terms/", 
-      'imlsdccProf' => "http://imlsdcc.grainger.uiuc.edu/profile#",
-      'dcterms' => "http://purl.org/dc/terms/",
-      'dc' => "http://purl.org/dc/elements/1.1/"
-    }
     all_records.flatten!
-    all_records.each do |record|
-      doc = Nokogiri::XML::Document.parse record.to_s
-      profile = {}
-      profile[:imlsdcc_identifier] = doc.xpath('//imlsdccProf:collectionDescription/dc:identifier', namespaces).text
-      puts profile[:imlsdcc_identifier]
-      existing_profile = Profile.find_by_imlsdcc_identifier(profile[:imlsdcc_identifier])
-      if existing_profile
-        puts "\nAlready created!\n"
+    
+    all_records.each_with_index do |record, index|
+      puts index
+      imls_profile = Capsys::ImlsdccProfile.new(record.to_s)
+      
+      existing_profile = Profile.find_by_imlsdcc_identifier(imls_profile.identifier)
+      if existing_profile 
+        if !ENV['UPDATEPROFILE']
+          puts "\nAlready created!\n"
+        else
+          existing_profile.update_attributes(imls_profile.profile)
+          puts existing_profile.save
+        end
       else   
         begin
-          profile[:url] =                doc.xpath('//imlsdccProf:collectionDescription/cld:isLocatedAt', namespaces).text
-          profile[:description] =        doc.xpath('//imlsdccProf:collectionDescription/dcterms:abstract', namespaces).text
-          profile[:name] =               doc.xpath('//imlsdccProf:collectionDescription/dc:title', namespaces).text
-          puts Profile.new(profile).save
+          puts Profile.new(imls_profile.profile).save
         rescue
           next
         end
       end
-    end
+      puts
+    end #each
   end #load
 end
