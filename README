@@ -3,7 +3,7 @@
 This is a simple, throw away application which demonstrates a little of what 
 CAPS could help enable. For more on the concept see: http://go.ncsu.edu/dplacaps
 
-To see a test version running see:
+To see a running test version of this code see:
 
 http://capsys.herokuapp.com/
 
@@ -13,7 +13,7 @@ http://capsys.herokuapp.com/
 
 So far only tested with Ruby 1.9.2-p290 under rvm.
 
-* mongoDB
+* MongoDB
 
 Currently tested with mongodb-linux-x86_64-1.8.1. Go to the mongodb
 site for installation instructions for your platform. Start up
@@ -21,7 +21,13 @@ mongod before continuing.
 
 == Installation
 
-Once you check out the code, install the required gems:
+Check out the code with:
+
+git clone git://github.com/jronallo/capsys.git
+
+cd capsys
+
+Install the required gems:
 
 bundle install
 
