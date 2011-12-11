@@ -6,7 +6,7 @@ CAPS could help enable. For more on the concept see: http://go.ncsu.edu/dplacaps
 
 To see a running test version of this code see:
 
-    http://capsys.herokuapp.com/
+[http://capsys.herokuapp.com/](http://capsys.herokuapp.com/)
 
 Prerequisites
 -------------
@@ -42,7 +42,7 @@ Seed Data
 ---------
 
 Data is currently seeded from the IMLS DCC Registry OAI-PMH gateway:
-http://imlsdcc.grainger.uiuc.edu/
+[http://imlsdcc.grainger.uiuc.edu/](http://imlsdcc.grainger.uiuc.edu/)
 
 There is a rake task which allows you to load this data into your
 development version:
