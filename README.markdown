@@ -8,9 +8,6 @@ To see a running test version of this code see:
 
 [http://capsys.herokuapp.com/](http://capsys.herokuapp.com/)
 
-To see more of how this application may fit into a group of services around
-digital collections see the [strawman proposal](https://docs.google.com/document/d/1tefaQfBIDRuyvJWCsCvkXxzri5TQeJHfc0OWlEl_FqU/edit)
-
 Prerequisites
 -------------
 
