@@ -1,4 +1,9 @@
-<h2><%= params[:category] %> Collection Profiles</h2>
+<% if params[:category] %>
+  <h2><%= link_to 'Collection Profiles', profiles_path %> > <%= params[:category] %> Category</h2>
+<% else -%>
+  <h2>Collection Profiles</h2>
+<% end -%>
+
 
 <%= render :partial => 'categories' %>
 
