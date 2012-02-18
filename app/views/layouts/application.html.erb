@@ -8,8 +8,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="main"  class="container_12">
-    <h1 class="grid_12"><%= link_to "Collection Achievements and Profiles System", root_path %></h1>
+  <%= render :partial => '/layouts/navbar'%>
+  <div id="main"  class="container">
+    
+    
     <%= yield %>
     <%= yield :sidebar %>
     <div class="clear"></div>

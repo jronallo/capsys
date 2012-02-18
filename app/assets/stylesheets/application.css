@@ -3,13 +3,14 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require style_boilerplate
+ 
  *= require formtastic
- *= require scaffolds
+ 
  *= require profiles
  *= require sitemaps
- *= require reset.css
- *= require text.css
- *= require 960_12_col.css
+ 
+ 
+ *= require bootstrap
+ *= require responsive
 
 */

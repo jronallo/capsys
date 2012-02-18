@@ -1,33 +1,16 @@
 <h2><%= params[:category] %> Collection Profiles</h2>
 
-<div id="above_results">
-  <div>
-    <% if params[:category]%>
-      <%= @profiles.length %> Collection Profiles in the <span class="current_category"><%= params[:category] %></span> category.
-    <% else %>
-      <%= @profiles.length %> total Collection Profiles.     
-    <% end -%>
-  </div>
-  
-  <% if @categories %>
-    <div id="categories">
-      <% @categories.each do |category| %>
-        <span class="category">
-          <%= link_to category['_id'], profiles_path(:category => category['_id']) %>&nbsp;(<%= category['value'].to_i %>)  
-        </span>
-      <% end -%>
-    </div>
-  <% else %>
-    <%= link_to 'See all profiles', profiles_path %>
-  <% end -%>
-</div>
+<%= render :partial => 'categories' %>
 
-<div id="searchbox">
-  <form>
-    <label for="search">Quick Filter by Word in Results below:</label>
-    <input type="text" name="search" id="search">
-  </form>
-  <span id="search_count"></span>
+<div class="row">
+  <div class="span6" id="searchbox">
+    <form>    
+      <i class="icon-search"></i>
+      <input type="text" name="search" id="search"
+        placeholder="Filter Profiles">
+    </form>
+    <span id="search_count"></span>
+  </div>
 </div>
 
 <% if true %>
@@ -52,4 +35,4 @@
 
 <br />
 
-<%= link_to 'New Profile', new_profile_path %>
+<%= link_to 'New Profile', new_profile_path, :class => [:btn, "btn-primary", "btn-large"] %>

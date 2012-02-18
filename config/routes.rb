@@ -1,10 +1,14 @@
 DplaCaps::Application.routes.draw do
   
 
+  get "page/about"
+
   resources :profiles do
     resource :sitemap  
     resource :robotstxt
   end
+  
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
