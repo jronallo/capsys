@@ -1,48 +1,57 @@
-<div class="grid_8">
-  <div id="notice"><%= notice %></div>
-  <h2><%= @profile.name %></h2>
-  
-  <p>  
-    <%= link_to @profile.url, @profile.url %> <i class="icon-share"></i>
-  </p>
-  
-  <p>
-    <%= @profile.description %>
-  </p>
-  
-  <ul>
-    <% @profile.categories.each do |category| %>
-      <li><%= link_to category, profiles_path(:category => category) %></li>
-    <% end -%>
-  </ul>
-  
-  <%= link_to 'Edit', edit_profile_path(@profile) %> |
-  <%= link_to 'All Profiles', profiles_path %>
-</div>
-
-<% content_for :sidebar do %>
-<div class="grid_4">
-  <div id="sidebar">
-    <% if @profile.achievements.length > 0%>
-      <h3>Completed Achievements</h3>
-      <ul>
-        <% @profile.achievements.each do |achievement| %>
-          <li><%= link_to achievement.class.to_s, send("profile_#{achievement.class.to_s.parameterize}_path", @profile) %></li>
-        <% end -%>
-      </ul>
-    <% end -%>
-   
-    <% if incomplete_achievements(@profile).length > 0%>
-      <h3>Possible Achievements</h3>
-      <ul>
-        <% incomplete_achievements(@profile).each do |klazz| %>        
-          <li><%= link_to klazz.to_s, send("new_profile_#{klazz.to_s.parameterize}_path", @profile) %></li>        
-        <% end -%>
-      </ul>
-    <% end -%>
+<div class="row">
+  <div class="span12">
+    <div id="notice"><%= notice %></div>
+    <h2><%= @profile.name %></h2>
+    
+    <p>  
+      <%= link_to @profile.url, @profile.url %> <i class="icon-share"></i>
+    </p>
   </div>
 </div>
-<% end -%>
+  
+<div class="row">
+  <div class="span8">
+    <p>
+      <%= @profile.description %>
+    </p>
+    <h3>Categories</h3>
+    <ul>
+      <% @profile.categories.each do |category| %>
+        <li><%= link_to category, profiles_path(:category => category) %></li>
+      <% end -%>
+    </ul>
+    
+    <%= link_to 'Edit', edit_profile_path(@profile), :class => [:btn, 'btn-warning'] %>
+    <%= link_to 'All Profiles', profiles_path, :class => [:btn, 'btn-primary'] %>
+  </div>
+  
+  
+  <div class="span3">
+    <div id="sidebar">
+      <div class="inner">
+        <% if @profile.achievements.length > 0%>
+          <h3>Completed Achievements</h3>
+          <ul>
+            <% @profile.achievements.each do |achievement| %>
+              <li><%= link_to achievement.class.to_s, send("profile_#{achievement.class.to_s.parameterize}_path", @profile) %></li>
+            <% end -%>
+          </ul>
+        <% end -%>
+       
+        <% if incomplete_achievements(@profile).length > 0%>
+          <h3>Possible Achievements</h3>
+          <ul>
+            <% incomplete_achievements(@profile).each do |klazz| %>        
+              <li><%= link_to klazz.to_s, send("new_profile_#{klazz.to_s.parameterize}_path", @profile) %></li>        
+            <% end -%>
+          </ul>
+        <% end -%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 

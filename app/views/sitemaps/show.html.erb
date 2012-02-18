@@ -12,7 +12,7 @@
   <%= @sitemap.valid_sitemap %>
 </p>
 
-<%= link_to 'Edit', edit_profile_sitemap_path(@profile) %> |
-<%= link_to 'Back to Profile', profile_path(@profile) %>
+<%= link_to 'Edit', edit_profile_sitemap_path(@profile), :class => 'btn btn-warning' %>
+<%= link_to 'Back to Profile', profile_path(@profile), :class => 'btn btn-primary' %><br/><br/>
 <%= button_to "Destroy", {:action => :destroy, :id => @sitemap.id}, 
-            :class => 'destroy', :method => :delete %>
+            :class => 'destroy btn btn-danger', :method => :delete %>

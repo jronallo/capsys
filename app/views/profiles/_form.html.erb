@@ -12,9 +12,12 @@
   <% end %>
 
   <%= f.inputs do %>
-    <%= f.input :name %>
-    <%= f.input :url %>
-    <%= f.input :description, :as => :text %>
+    <%= f.input :name, :input_html => {:class => 'span6'} %>
+    <%= f.input :url, :input_html => {:class => 'span6'} %>
+    <%= f.input :description, :as => :text, :input_html => {:class => 'span6'} %>
   <% end -%>
-  <%= f.buttons %>
+  <%= f.buttons do %>
+    <%= f.commit_button :button_html => { :class=> [:btn, 'btn-large'] } %>
+  <% end -%>
+  
 <% end %>

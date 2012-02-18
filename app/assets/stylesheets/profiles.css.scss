@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$dark-border-color: #E6E6E6;
+$light-background-color: #FAFAFA;
+
 @mixin rounded-corner {
     margin-bottom: 10px;
     -webkit-border-radius: 6px;
@@ -11,8 +14,10 @@
 }
 
 #main {
-  #sidebar {    
-    border: 1px solid black;
+  #sidebar {  
+    @include rounded-corner;
+    border: 1px solid $dark-border-color;
+    background-color: whiteSmoke;
     padding: 5px;
   }
   
@@ -49,8 +54,8 @@
       padding-bottom: 20px;
       h3{padding:0;margin:0;}  
       @include rounded-corner;
-      border: 1px solid #E6E6E6;
-      background-color: #FAFAFA;
+      border: 1px solid $dark-border-color;
+      background-color: $light-background-color;
     }
   }
   

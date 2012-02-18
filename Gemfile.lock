@@ -81,6 +81,9 @@ GEM
     ffi (1.0.9)
     formtastic (2.0.2)
       rails (~> 3.0)
+    formtastic-bootstrap (1.1.1)
+      formtastic
+      rails (~> 3.1)
     gherkin (2.6.2)
       json (>= 1.4.6)
     hike (1.2.1)
@@ -209,6 +212,7 @@ DEPENDENCIES
   factory_girl_rails
   fakeweb
   formtastic
+  formtastic-bootstrap
   launchy
   mongo_mapper
   nifty-generators

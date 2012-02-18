@@ -9,6 +9,7 @@ gem 'mongo_mapper'
 gem 'bson_ext'
 gem 'therubyracer'
 gem 'formtastic'
+gem 'formtastic-bootstrap'
 gem 'nokogiri'
 gem 'oai'
 

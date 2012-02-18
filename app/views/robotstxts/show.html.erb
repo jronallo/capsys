@@ -10,6 +10,6 @@
 
 <%= simple_format @robotstxt.text %>
 
-<%= link_to 'Back to Profile', profile_path(@profile) %>
+<%= link_to 'Back to Profile', profile_path(@profile), :class => 'btn btn-primary' %><br/><br/>
 <%= button_to "Destroy", {:action => :destroy, :id => @robotstxt.id}, 
-            :class => 'destroy', :method => :delete %>
+            :class => 'destroy btn btn-danger', :method => :delete %>
