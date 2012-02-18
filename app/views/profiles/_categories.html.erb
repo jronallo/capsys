@@ -1,15 +1,17 @@
 <div class="row">
   <div id="above_results" class="span12">
-    <div>
-      <h3>Categories</h3>
-      <div>
-        <% if params[:category]%>
-          <%= @profiles.length %> Collection Profiles in the 
-          <span class="current_category"><%= params[:category] %></span> 
-          category.
-        <% else %>
-          <%= @profiles.length %> total Collection Profiles.     
-        <% end -%>
+    <div class="inner">
+      <div class="row">
+        <h3 class="span3">Categories</h3>
+        <div class="span5">
+          <% if params[:category]%>
+            <%= @profiles.length %> Collection Profiles in the 
+            <span class="current_category btn disabled btn-primary"><%= params[:category] %></span> 
+            category.
+          <% else %>
+            <%= @profiles.length %> total Collection Profiles.     
+          <% end -%>
+        </div>
       </div>
       
       <% if @categories %>
@@ -19,7 +21,7 @@
           <% end -%>
         </div>
       <% else %>
-        <%= link_to 'See all profiles', profiles_path %>
+        <%= link_to 'See all profiles', profiles_path, :class => [:btn, 'btn-small'] %>
       <% end -%>
     </div>
   </div>

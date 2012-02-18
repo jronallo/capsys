@@ -4,7 +4,7 @@
 
 <div class="row">
   <div class="span6" id="searchbox">
-    <div>
+    <div class="inner">
       <form>    
         <i class="icon-search"></i>
         <input type="text" name="search" id="search"
@@ -15,35 +15,12 @@
   </div>
   
   <div class="span6" id="newprofile">
-    <div>
+    <div class="inner">
     <%= link_to 'New Profile', new_profile_path, :class => [:btn, "btn-success", "btn-large"] %>
     </div>
   </div>
   
 </div>
 
-<% if true %>
-<div id="profiles" class="row" >
-  <% @profiles.each do |profile| %>
-    <div class="profile span12">
-      <div>
-        <h3><%= link_to profile.name, profile %></h3>
-        <div><%= link_to truncate(profile.url, :length => 50), profile.url, :title => profile.url %></div>
-        <% if profile.achievement_count > 0 %>
-          <div><%= profile.achievement_count %> completed <%= profile.achievement_count == 1 ? 'achievement' : 'achievements' %>.</div>
-        <% end -%>
-        <% if profile.categories.length > 0 %>
-        <div><%= profile.categories.join(', ')%></div>
-        <% end -%>
-        
-        <div><%= truncate(profile.description, :length => 150, :separator => ' ') %></div>
-      </div>
-    </div>
-  <% end %>
-</div>
-<% end -%>
 
-
-<br />
-
-
+<%= render :partial => "profiles" %>

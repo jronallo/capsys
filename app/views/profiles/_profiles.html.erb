@@ -1,0 +1,18 @@
+<div id="profiles" class="row" >
+  <% @profiles.each do |profile| %>
+    <div class="profile span12">
+      <div class="inner">
+        <h3><%= link_to profile.name, profile %></h3>
+        <div><%= link_to truncate(profile.url, :length => 80), profile.url, :title => profile.url %> <i class="icon-share"></i></div>
+        <% if profile.achievement_count > 0 %>
+          <div><%= profile.achievement_count %> completed <%= profile.achievement_count == 1 ? 'achievement' : 'achievements' %>.</div>
+        <% end -%>
+        <% if profile.categories.length > 0 %>
+        <div><%= profile.categories.join(', ')%></div>
+        <% end -%>
+        
+        <div><%= truncate(profile.description, :length => 150, :separator => ' ') %></div>
+      </div>
+    </div>
+  <% end %>
+</div>
