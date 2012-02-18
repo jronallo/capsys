@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @mixin rounded-corner {
-  padding: 10px;
     margin-bottom: 10px;
     background-color: whiteSmoke;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
+    div{padding:10px;}
 }
 
 #main {
@@ -24,17 +24,21 @@
     }
     #categories{
       padding: 10px;
-      
+      .category{
+        margin: 5px;
+        font-weight:bold;
+        font-size: 1.2em;
+      } 
     }
-    span.category{
-      margin-right: 5px;
-      a{white-space: nowrap;}
-    }  
+     
   }
   
   #searchbox{
     @include rounded-corner;
     form{display:inline;}
+  }
+  #newprofile{
+    @include rounded-corner;
   }
   
   
