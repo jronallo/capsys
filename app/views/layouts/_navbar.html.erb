@@ -8,6 +8,9 @@
           <li <%= 'class="active"'.html_safe if current_page?(root_path) %>>
             <%= link_to 'Profiles', root_path %>
           </li>
+          <li <%= 'class="active"'.html_safe if current_page?(users_path) %>>
+            <%= link_to 'Users', users_path %>
+          </li>
           <li <%= 'class="active"'.html_safe if current_page?(page_about_path) %>>
             <%= link_to 'About', page_about_path %>
           </li>  
