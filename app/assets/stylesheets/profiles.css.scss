@@ -51,7 +51,6 @@ $light-background-color: #FAFAFA;
   
   #profiles {   
     .profile{
-      padding-bottom: 20px;
       h3{padding:0;margin:0;}  
       @include rounded-corner;
       border: 1px solid $dark-border-color;
@@ -59,4 +58,8 @@ $light-background-color: #FAFAFA;
     }
   }
   
+}
+
+.small-image {
+  height: 20px;  
 }

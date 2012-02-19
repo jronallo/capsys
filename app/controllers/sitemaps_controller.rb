@@ -1,4 +1,7 @@
 class SitemapsController < ApplicationController
+  
+  before_filter :logged_in?, :except => [:show]
+  
   # GET /sitemaps
   # GET /sitemaps.json
   def index

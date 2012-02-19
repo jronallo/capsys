@@ -13,7 +13,11 @@ gem 'formtastic-bootstrap'
 gem 'nokogiri'
 gem 'oai'
 
-gem "thin"
+gem 'thin'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+
 
 gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
 

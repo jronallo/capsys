@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= link_to @profile.name, @profile %></h2>
+<h2><%= link_to @profile.name, @profile %> > Robots.txt</h2>
 
 <p>
   <b>Updated At:</b>
@@ -10,6 +10,10 @@
 
 <%= simple_format @robotstxt.text %>
 
-<%= link_to 'Back to Profile', profile_path(@profile), :class => 'btn btn-primary' %><br/><br/>
-<%= button_to "Destroy", {:action => :destroy, :id => @robotstxt.id}, 
+<%= link_to 'Back to Profile', profile_path(@profile), :class => 'btn btn-primary' %>
+
+<% if current_user %>
+  <br/><br/>
+  <%= button_to "Destroy", {:action => :destroy, :id => @robotstxt.id}, 
             :class => 'destroy btn btn-danger', :method => :delete %>
+<% end -%>

@@ -19,11 +19,13 @@
     </div>
   </div>
   
-  <div class="span6" id="newprofile">
-    <div class="inner">
-    <%= link_to 'New Profile', new_profile_path, :class => [:btn, "btn-success", "btn-large"] %>
+  <% if current_user %>
+    <div class="span6" id="newprofile">
+      <div class="inner">
+      <%= link_to 'New Profile', new_profile_path, :class => [:btn, "btn-success", "btn-large"] %>
+      </div>
     </div>
-  </div>
+  <% end -%>
   
 </div>
 

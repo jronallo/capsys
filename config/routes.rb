@@ -2,6 +2,11 @@ DplaCaps::Application.routes.draw do
   
 
   get "page/about"
+  get "page/curate"
+  get "page/api"
+  
+  match "auth/:provider/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
 
   resources :profiles do
     resource :sitemap  

@@ -20,8 +20,9 @@
         <li><%= link_to category, profiles_path(:category => category) %></li>
       <% end -%>
     </ul>
-    
-    <%= link_to 'Edit', edit_profile_path(@profile), :class => [:btn, 'btn-warning'] %>
+    <% if current_user %>
+      <%= link_to 'Edit', edit_profile_path(@profile), :class => [:btn, 'btn-warning'] %>
+    <% end -%>
     <%= link_to 'All Profiles', profiles_path, :class => [:btn, 'btn-primary'] %>
   </div>
   

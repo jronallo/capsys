@@ -1,6 +1,19 @@
 <h1>About</h1>
 
-<p>The Collection Achievements and Profiles System (CAPS) application was written by 
+<p>
+  The Collection Achievements and Profiles System (CAPS) is an editable directory of 
+  collections on the Web. Collection Profiles are both human readable and 
+  <%= link_to 'machine actionable', page_api_path %>. The profiles consist of an 
+  an extensible set of descriptive and technical attributes about the collection.
+  Any logged in user can edit a profile. Collection Achievements provide a mechanism 
+  for progressively expanding Collection Profile descriptions with small pieces of
+  information about a collection or its Web presence. The current set of information 
+  collected is slim, but enough to begin to be useful.
+</p>
+
+<h2>Credits</h2>
+
+<p>The CAPS application was written by 
 <%= link_to 'Jason Ronallo', 'http://jronallo.github.com/'%>. It is 
 <%= link_to 'based on work', 'http://go.ncsu.edu/dplacaps' %> done with 
 <%= link_to 'Tito Sierra', 'https://twitter.com/#!/tsierra' %>
@@ -10,6 +23,13 @@ as part of the
 <%= link_to 'Beta Sprint', 'http://blogs.law.harvard.edu/dpla/' %>.
 </p>
 
+<p>
+  The seed data for Collection Profiles came from the 
+  <%= link_to 'IMLS DCC Registry', 'http://imlsdcc.grainger.uiuc.edu/'%> 
+  OAI-PMH gateway.
+</p>
+
+<h2>Code</h2>
 <p>
 Source code is available on <%= link_to 'github', 'https://github.com/jronallo/capsys' %>.  
 </p>

@@ -1,0 +1,16 @@
+<h1>Curate</h1>
+
+<p>
+  Do you know about a digital collection at a library, archive, or museum that is on the Web?
+  Search the <%= link_to 'profiles page', profiles_path %> to see if CAPS already knows about 
+  the collection. If CAPS doesn't know about the collection yet, please feel free to add it.
+</p>
+
+<p>
+  <% if current_user %>
+    You are already signed in and ready to <%= link_to 'get started', profiles_path %>!
+  <% else -%>
+    <%= link_to "Sign in with Twitter to get started!", "/auth/twitter", 
+      :class => 'btn btn-large btn-success' %>
+  <% end -%>
+</p>

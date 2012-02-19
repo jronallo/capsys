@@ -1,4 +1,8 @@
 class ProfilesController < ApplicationController
+    
+  before_filter :logged_in?, :except => [:index, :show]
+  before_filter :clean_categories, :only => [:create, :update]
+  
   # GET /profiles
   # GET /profiles.json
   def index
@@ -93,5 +97,14 @@ class ProfilesController < ApplicationController
     # here's where you could also add some filtering or sorting
     @categories = Capsys::CategoryList.category_list #.first.last
   end
-
+  
+  def clean_categories
+    if params[:profile][:categories] 
+      categories = params[:profile][:categories].split(',')
+      params[:profile][:categories] = categories.map do |category|
+        category.strip
+      end.uniq.sort
+    end
+  end
+  
 end

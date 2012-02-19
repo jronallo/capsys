@@ -13,8 +13,10 @@
 
   <%= f.inputs do %>
     <%= f.input :name, :input_html => {:class => 'span6'} %>
-    <%= f.input :url, :input_html => {:class => 'span6'} %>
+    <%= f.input :url, :label => 'URL', :input_html => {:class => 'span6'} %>
     <%= f.input :description, :as => :text, :input_html => {:class => 'span6'} %>
+    <%= f.input :categories, :label => 'Categories', :hint => 'Separate each category with a comma.', 
+      :input_html => {:class => 'span6', :value => @profile.categories.join(', ')} %>
   <% end -%>
   <%= f.buttons do %>
     <%= f.commit_button :button_html => { :class=> [:btn, 'btn-large'] } %>

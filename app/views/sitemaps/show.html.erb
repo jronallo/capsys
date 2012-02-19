@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= link_to @profile.name, @profile %></h2>
+<h2><%= link_to @profile.name, @profile %> > Sitemap</h2>
 
 <p>
   <b>Sitemap URL:</b>
@@ -12,7 +12,10 @@
   <%= @sitemap.valid_sitemap %>
 </p>
 
-<%= link_to 'Edit', edit_profile_sitemap_path(@profile), :class => 'btn btn-warning' %>
-<%= link_to 'Back to Profile', profile_path(@profile), :class => 'btn btn-primary' %><br/><br/>
-<%= button_to "Destroy", {:action => :destroy, :id => @sitemap.id}, 
+<%= link_to 'Back to Profile', profile_path(@profile), :class => 'btn btn-primary' %>
+<% if current_user %>
+  <%= link_to 'Edit', edit_profile_sitemap_path(@profile), :class => 'btn btn-warning' %>
+  <br/><br/>
+  <%= button_to "Destroy", {:action => :destroy, :id => @sitemap.id}, 
             :class => 'destroy btn btn-danger', :method => :delete %>
+<% end -%>

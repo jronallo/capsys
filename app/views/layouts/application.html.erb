@@ -9,12 +9,15 @@
 </head>
 <body>
   <%= render :partial => '/layouts/navbar'%>
-  <div id="main"  class="container">
-    
+  
+  
+  
+  <div id="main"  class="container">      
+    <% flash.each do |name, msg| %> 
+      <%= content_tag :div, msg, :id => "flash_#{name}", :class => 'alert alert-info' %> 
+    <% end %>
     
     <%= yield %>
-    <%= yield :sidebar %>
-    <div class="clear"></div>
   </div>
 
 </body>
