@@ -1,0 +1,26 @@
+<h1><%= link_to 'Users', users_path %> > <%= @user.name %></h1>
+
+<p>
+  <%= image_tag @user.image if @user.image %>
+</p>
+
+<p>
+  Name: <%= @user.name %>
+</p>
+
+<p>
+  Nickname: <%= @user.nickname %>
+</p>
+
+<p>
+  Twitter: <%= link_to @user.twitter, @user.twitter, :rel => 'nofollow' %>
+</p>
+
+<p>
+  Website: <%= link_to @user.website, @user.website, :rel => 'nofollow' %>
+</p>
+
+
+<% if Rails.env == 'development' %>
+  <%= debug @user %>
+<% end -%>

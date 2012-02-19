@@ -1,0 +1,27 @@
+<h1>Users</h1>
+
+<p>
+  This is a list of users who have created accounts. You need
+  to be a registered user to create and edit Collection Profiles.
+</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>User</th>
+      <th>Twitter</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @users.each do |user| %>
+        <td><%= image_tag user.image %></td>
+        <td><%= link_to user.name, user %></td>
+        <td><%= link_to user.twitter, user.twitter, :rel => 'nofollow'  if user.twitter %></td>
+        <td><%= link_to user.website, user.website, :rel => 'nofollow'  if user.website %></td>
+      <% end -%>
+    </tr>
+  </tbody>
+</table>

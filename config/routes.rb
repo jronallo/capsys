@@ -1,6 +1,8 @@
 DplaCaps::Application.routes.draw do
   
 
+  resources :users
+
   get "page/about"
   get "page/curate"
   get "page/api"
