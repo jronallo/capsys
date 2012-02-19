@@ -6,7 +6,6 @@ $dark-border-color: #E6E6E6;
 $light-background-color: #FAFAFA;
 
 @mixin rounded-corner {
-    margin-bottom: 10px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
@@ -14,15 +13,20 @@ $light-background-color: #FAFAFA;
 }
 
 #main {
-  #sidebar {  
-    @include rounded-corner;
-    border: 1px solid $dark-border-color;
-    background-color: whiteSmoke;
-    padding: 5px;
+  #sidebar {     
+    
+    margin-bottom: 20px;
+    div.inner{
+      @include rounded-corner;
+      border: 1px solid $dark-border-color;
+      padding:10px;
+      background-color: whiteSmoke;
+    }
   }
   
   #above_results {   
     @include rounded-corner;
+    margin-bottom: 16px;
     background-color: whiteSmoke;
     .current_category{
       font-weight:bold;
@@ -40,6 +44,7 @@ $light-background-color: #FAFAFA;
   
   #searchbox{
     @include rounded-corner;
+    margin-bottom: 16px;
     background-color: whiteSmoke;
     form{display:inline;}
   }
@@ -53,6 +58,7 @@ $light-background-color: #FAFAFA;
     .profile{
       h3{padding:0;margin:0;}  
       @include rounded-corner;
+      margin-bottom: 16px;
       border: 1px solid $dark-border-color;
       background-color: $light-background-color;
     }

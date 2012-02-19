@@ -2,15 +2,24 @@
 
 <h2><%= link_to @profile.name, @profile %> > Sitemap</h2>
 
-<p>
-  <b>Sitemap URL:</b>
-  <%= link_to @sitemap.url, @sitemap.url %>
-</p>
+<div class="row">
+  <div class="span8">
+    <p>
+      <b>Sitemap URL:</b>
+      <%= link_to @sitemap.url, @sitemap.url %>
+    </p>
+    
+    <p>
+      <b>Valid:</b>
+      <%= @sitemap.valid_sitemap %>
+    </p>
+  </div>
 
-<p>
-  <b>Valid:</b>
-  <%= @sitemap.valid_sitemap %>
-</p>
+  <div class="span4" id="sidebar">
+    <%= render :partial => 'description' %>
+  </div>
+  
+</div>
 
 <%= link_to 'Back to Profile', profile_path(@profile), :class => 'btn btn-primary' %>
 <% if current_user %>

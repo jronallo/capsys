@@ -1,3 +1,5 @@
+<div class="row">
+<div class="span8">
 <%= semantic_form_for [@profile, @sitemap], :url => profile_sitemap_path  do |f| %>
   <% if @sitemap.errors.any? %>
     <div id="error_explanation">
@@ -12,7 +14,7 @@
   <% end %>
 
   <%= f.inputs do %>
-    <%= f.input :url, :label => 'URL' %>
+    <%= f.input :url, :label => 'URL', :hint => 'Enter the URL to your single sitemap or sitemap index file.' %>
     <%#= f.input :valid %>
   <% end %>
 
@@ -20,3 +22,8 @@
     <%= f.commit_button %>
   <% end %>
 <% end %>
+</div>
+<div class="span4" id="sidebar">
+    <%= render :partial => 'description' %>
+  </div>
+</div>

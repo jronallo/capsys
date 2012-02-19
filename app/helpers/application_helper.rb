@@ -15,4 +15,8 @@ module ApplicationHelper
     end
   end
   
+  def project_twitter_url
+    'http://twitter.com/ronallo'
+  end
+  
 end
