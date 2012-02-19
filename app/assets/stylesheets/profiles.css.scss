@@ -69,3 +69,7 @@ $light-background-color: #FAFAFA;
 .small-image {
   height: 20px;  
 }
+
+#current_categories {
+  .disabled:hover {cursor:pointer;}
+}
