@@ -7,6 +7,13 @@
 </p>
 
 <p>
+  You can also help by categorizing collections. If you know a collection well, please review
+  the categories assigned to that profile. There may also be 
+  <%= link_to 'collections which have not been categorized', profiles_path(:category => 'Unknown') %>. 
+  Take a look at any of those collections and give them some categories.
+</p>
+
+<p>
   <% if current_user %>
     You are already signed in and ready to <%= link_to 'get started', profiles_path %>!
   <% else -%>

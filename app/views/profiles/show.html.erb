@@ -51,10 +51,16 @@
         <% end -%>
       </div>
     </div>
+    <div>
+      <p>Created At: <%= @profile.created_at %></p>
+      <p>Updated At: <%= @profile.updated_at %></p>
+    </div>
   </div>
 </div>
 
-
+<% if Rails.env == 'development' %>
+  <%= debug @profile.attributes %>
+<% end -%>
 
 
 
