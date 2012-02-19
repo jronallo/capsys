@@ -17,6 +17,10 @@
     <%= f.input :description, :as => :text, :input_html => {:class => 'span6'} %>
     <%= f.input :categories, :label => 'Categories', :hint => 'Separate each category with a comma.', 
       :input_html => {:class => 'span6', :value => @profile.categories.join(', ')} %>
+    <p class="span6">Categories in use include: 
+    <%= @categories.map{|cat| cat['_id']}.join(', ') %>
+            
+    </p>
   <% end -%>
   <%= f.buttons do %>
     <%= f.commit_button :button_html => { :class=> [:btn, 'btn-large'] } %>

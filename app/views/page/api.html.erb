@@ -1,0 +1,21 @@
+<h1>API</h1>
+
+<p>
+  CAPS makes all of the data from collection profiles available through a simple JSON API.
+  You can simply <%= link_to 'grab all the data at once', profiles_path(:format => :json) %>
+  (however slowly). Or the data for just one collection profile by appending ".json" to the
+  end of the URL like so:
+  <%= link_to profile_url(Profile.first, :format => :json), 
+    profile_path(Profile.first, :format => :json) %>. Content negotiation works too.
+</p>
+
+<p>
+  The data for a profile has just a few fields. Most of the data is within "achievements" 
+  broken down by the data collected for each achievement.
+</p>
+
+<p>
+  Need some other API to this data? Have questions about the data?
+  <%= link_to "Let me know", "http://twitter.com/ronallo"%>.
+</p>
+

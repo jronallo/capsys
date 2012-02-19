@@ -35,7 +35,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/new.json
   def new
     @profile = Profile.new
-
+    category_list
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @profile }
@@ -45,6 +45,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1/edit
   def edit
     @profile = Profile.find(params[:id])
+    category_list
   end
 
   # POST /profiles
@@ -92,12 +93,7 @@ class ProfilesController < ApplicationController
   end
   
   private
-  
-  def category_list
-    # here's where you could also add some filtering or sorting
-    @categories = Capsys::CategoryList.category_list #.first.last
-  end
-  
+    
   def clean_categories
     if params[:profile][:categories] 
       categories = params[:profile][:categories].split(',')

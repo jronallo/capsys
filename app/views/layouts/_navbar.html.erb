@@ -14,6 +14,9 @@
           <li <%= 'class="active"'.html_safe if current_page?(page_curate_path) %>>
             <%= link_to 'Curate', page_curate_path %>
           </li>
+          <li <%= 'class="active"'.html_safe if current_page?(page_api_path) %>>
+            <%= link_to 'API', page_api_path %>
+          </li>
         </ul>        
       </div> 
       <div>
