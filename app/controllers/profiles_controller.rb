@@ -58,6 +58,7 @@ class ProfilesController < ApplicationController
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
         format.json { render json: @profile, status: :created, location: @profile }
       else
+        category_list
         format.html { render action: "new" }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
       end
@@ -82,8 +83,11 @@ class ProfilesController < ApplicationController
 
   # DELETE /profiles/1
   # DELETE /profiles/1.json
-  def destroy
+  def destroy     
     @profile = Profile.find(params[:id])
+    # do not allow profiles to be destroyed right now
+    redirect_to @profile    
+    
     @profile.destroy
 
     respond_to do |format|
@@ -97,10 +101,16 @@ class ProfilesController < ApplicationController
   def clean_categories
     if params[:profile][:categories] 
       categories = params[:profile][:categories].split(',')
-      params[:profile][:categories] = categories.map do |category|
-        category.strip
-      end.uniq.sort
-    end
+      uniq_categories = categories.map do |category|
+        category.strip!
+        category unless category.blank?
+      end.compact.uniq.sort      
+      if uniq_categories.length > 1 and uniq_categories.include?("Unknown")
+        uniq_categories = uniq_categories - ["Unknown"]
+      end
+      uniq_categories = ["Unknown"] if uniq_categories.blank?
+      params[:profile][:categories] = uniq_categories      
+    end    
   end
   
 end

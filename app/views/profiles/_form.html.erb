@@ -1,6 +1,6 @@
 <%= semantic_form_for(@profile) do |f| %>
   <% if @profile.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-error">
       <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
       <ul>
@@ -16,10 +16,13 @@
     <%= f.input :url, :label => 'URL', :input_html => {:class => 'span6'} %>
     <%= f.input :description, :as => :text, :input_html => {:class => 'span6'} %>
     <%= f.input :categories, :label => 'Categories', :hint => 'Separate each category with a comma.', 
-      :input_html => {:class => 'span6', :value => @profile.categories.join(', ')} %>
-    <p class="span6">Categories in use include: 
-    <%= @categories.map{|cat| cat['_id']}.join(', ') %>
-            
+      :input_html => {:class => 'span6', :value => category_input_value(@profile) } %>
+    <p class="span6" id="current_categories">
+    <span id="category_picker_text">Categories in use include:</span><br/>
+    <% @categories.each_with_index do |cat, index| %>
+      <% next if cat['_id'] == 'Unknown' %>
+      <span class="category"><%= cat['_id'] %></span>&nbsp;(<%= cat['value'].to_i %>)<%= ', ' unless @categories.count == (index + 1) %>
+    <% end -%>            
     </p>
   <% end -%>
   <%= f.buttons do %>

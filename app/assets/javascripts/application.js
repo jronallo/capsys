@@ -8,3 +8,4 @@
 //= require jquery.quicksearch 
 //= require_tree .
 
+Caps = {};

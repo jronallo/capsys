@@ -14,12 +14,14 @@
     <p>
       <%= @profile.description %>
     </p>
-    <h3>Categories</h3>
-    <ul>
-      <% @profile.categories.each do |category| %>
-        <li><%= link_to category, profiles_path(:category => category) %></li>
-      <% end -%>
-    </ul>
+    <% if !@profile.categories.blank? %>
+      <h3>Categories</h3>
+      <ul>
+        <% @profile.categories.each do |category| %>
+          <li><%= link_to category, profiles_path(:category => category) %></li>
+        <% end -%>
+      </ul>
+    <% end -%>
     <% if current_user %>
       <%= link_to 'Edit', edit_profile_path(@profile), :class => [:btn, 'btn-warning'] %>
     <% end -%>

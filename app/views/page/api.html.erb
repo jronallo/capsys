@@ -2,15 +2,35 @@
 
 <p>
   CAPS makes all of the data from collection profiles available through a simple JSON API.
-  You can simply <%= link_to 'grab all the data at once', profiles_path(:format => :json) %>
-  (however slowly). Or the data for just one collection profile by appending ".json" to the
-  end of the URL like so:
-  <%= link_to profile_url(Profile.first, :format => :json), 
-    profile_path(Profile.first, :format => :json) %>. Content negotiation works too.
+  You can just append ".json" to the end of many URLs to get back something useful. 
+  Content negotiation works too.
 </p>
 
+<h2>Get Everything</h2>
 <p>
-  The data for a profile has just a few fields. Most of the data is within "achievements" 
+  You can simply grab all the data at once (however slowly): 
+  <%= link_to profiles_url(:format => :json), profiles_path(:format => :json)%>.
+  Please feel free to cache and make backups of this data.
+</p>
+
+<h2>Get a Single Profile</h2>  
+<p>
+  The data for just one collection profile is returned by appending ".json" to the
+  end of the URL for that profile like so:
+  <%= link_to profile_url(Profile.first, :format => :json), 
+    profile_path(Profile.first, :format => :json) %>.
+</p>
+
+<h2>Categories</h2>
+<p>
+  If you are only interested in a single category, you can get just those profiles: 
+  <%= link_to profiles_url(:format => :json, :category => "Mathematics"),
+  profiles_path(:format => :json, :category => "Mathematics") %>
+</p>
+
+<h2>Data Model</h2>
+<p>
+  The core data for a profile has just a few fields. Most of the data is within "achievements" 
   broken down by the data collected for each achievement.
 </p>
 

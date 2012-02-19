@@ -6,4 +6,13 @@ module ApplicationHelper
     end
   end
   
+  def category_input_value(profile)
+    categories = profile.categories
+    if categories == ['Unknown']
+      ''
+    else
+      categories.join(', ')
+    end
+  end
+  
 end
