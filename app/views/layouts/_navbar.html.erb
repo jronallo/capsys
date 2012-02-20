@@ -28,6 +28,8 @@
           <li>
             <%= link_to 'Features & Bugs', 'https://github.com/jronallo/capsys/issues'%>
           </li>
+        </ul>
+        <ul class='secondary-nav nav'>
           <% if current_user %>
             <li class="current_user"><%= current_user_in_nav %></li>
             <li><%= link_to "Sign Out", signout_path %></li>
