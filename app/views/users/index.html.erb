@@ -2,16 +2,18 @@
 
 <p>
   This is a list of users who have created accounts. You need
-  to be a registered user to create and edit Collection Profiles.
+  to be a registered user to create and edit Collection Profiles
+  and Achievements.
 </p>
 
-<table class="table table-striped">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Image</th>
       <th>User</th>
       <th>Twitter</th>
       <th>Website</th>
+      <th>Edit Count</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +23,7 @@
       <td><%= link_to user.name, user %></td>
       <td><%= link_to user.twitter, user.twitter, :rel => 'nofollow'  if user.twitter %></td>
       <td><%= link_to user.website, user.website, :rel => 'nofollow'  if user.website %></td>
+      <td><%= user.edits.count %></td>
     </tr>
     <% end -%>
   </tbody>
