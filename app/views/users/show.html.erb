@@ -12,6 +12,8 @@
   Nickname: <%= @user.nickname %>
 </p>
 
+<p>Description: <%= @user.description %></p>
+
 <p>
   Twitter: <%= link_to @user.twitter, @user.twitter, :rel => 'nofollow' %>
 </p>
@@ -23,10 +25,4 @@
 <% if !@user.edits.blank? %>
 <h2>Edits (<%= @user.edits.count %>)</h2>
 <%= render :partial => '/edits/table', :locals => {:edits => @user.edits} %>
-<% end -%>
-
-
-<% if Rails.env == 'development' %>
-  <%= debug @user %>
-  <%= debug @user.edits.map{|edit| edit} %>
 <% end -%>
