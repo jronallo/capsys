@@ -3,6 +3,11 @@
     <div class="container">
       <%= link_to "Collection Achievements and Profiles System", root_path, 
         :class => 'brand' %>
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
       <div class="nav-collapse">
         <ul class="nav">
           <li <%= 'class="active"'.html_safe if current_page?(root_path) %>>
@@ -23,19 +28,14 @@
           <li>
             <%= link_to 'Features & Bugs', 'https://github.com/jronallo/capsys/issues'%>
           </li>
-        </ul>        
-      </div> 
-      <div>
-        <ul class="nav pull-right">
           <% if current_user %>
-          <li><%= link_to(image_tag(current_user.image, :class => "small-image"), current_user) if current_user.image %> </li>
-              <li><%= link_to current_user.name, current_user %></li>
+            <li class="current_user"><%= current_user_in_nav %></li>
             <li><%= link_to "Sign Out", signout_path %></li>
           <% else -%>
             <li><%= link_to "Sign in with Twitter", "/auth/twitter" %></li>
           <% end -%>
-        </ul>
-      </div>
+        </ul>        
+      </div> 
     </div>
   </div>
 </div>

@@ -19,4 +19,11 @@ module ApplicationHelper
     'http://twitter.com/ronallo'
   end
   
+  def current_user_in_nav
+    content = ''
+    content = image_tag(current_user.image, :class => "small-image") + ' ' if current_user.image
+    content << current_user.name
+    link_to content, current_user
+  end
+  
 end

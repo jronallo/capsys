@@ -66,8 +66,12 @@ $light-background-color: #FAFAFA;
   
 }
 
+.navbar .nav li.current_user a {
+  color: #00FFFC;
+}
 .small-image {
   height: 20px;  
+  vertical-align: middle;
 }
 
 #current_categories {

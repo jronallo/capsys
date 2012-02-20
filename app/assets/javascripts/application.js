@@ -7,5 +7,6 @@
 
 //= require jquery.quicksearch 
 //= require_tree .
+//= require bootstrap
 
 Caps = {};
