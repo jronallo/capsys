@@ -15,13 +15,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <% @users.each do |user| %>
-        <td><%= image_tag user.image %></td>
-        <td><%= link_to user.name, user %></td>
-        <td><%= link_to user.twitter, user.twitter, :rel => 'nofollow'  if user.twitter %></td>
-        <td><%= link_to user.website, user.website, :rel => 'nofollow'  if user.website %></td>
-      <% end -%>
+    <% @users.each do |user| %>
+    <tr>      
+      <td><%= image_tag user.image %></td>
+      <td><%= link_to user.name, user %></td>
+      <td><%= link_to user.twitter, user.twitter, :rel => 'nofollow'  if user.twitter %></td>
+      <td><%= link_to user.website, user.website, :rel => 'nofollow'  if user.website %></td>
     </tr>
+    <% end -%>
   </tbody>
 </table>

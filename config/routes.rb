@@ -1,11 +1,12 @@
 DplaCaps::Application.routes.draw do
   
-
+  resources :edits
+  
   resources :users
 
-  get "page/about"
-  get "page/curate"
-  get "page/api"
+  get "/about" => "page#about"
+  get "/curate" => "page#curate"
+  get "/api" => "page#api"
   
   match "auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout

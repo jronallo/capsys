@@ -1,0 +1,36 @@
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Action</th>
+      <th>Time</th>
+      <th>Achievement Type</th>
+      <th>Achievement</th>
+      <th>User</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% edits.reverse.each do |edit| %>
+    <tr>
+      <td><%= link_to edit.profile_id, edit.profile %></td>
+      <td><%= edit.action %></td>
+      <td><%= edit.created_at %> </td>
+      <td>
+        <% if edit.achievement_type %>
+          <%= edit.achievement_type %>
+        <% elsif edit.achievement_id -%>
+          Unknown
+        <% end -%>
+      </td>
+      <td>
+        <% if edit.achievement %>
+          <%= link_to edit.achievement_id, 
+            send("profile_#{edit.achievement.class.to_s.parameterize}_path", edit.profile)  %>
+        <% end%>
+      </td>
+      <td><%= link_to edit.user.name, edit.user %></td>
+      
+    </tr>
+    <% end -%>
+  </tbody>
+</table>

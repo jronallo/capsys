@@ -11,8 +11,7 @@ class ProfilesController < ApplicationController
     else
       category_list
       @profiles = Profile.all(:order => :name)
-    end
-    
+    end    
     
     respond_to do |format|
       format.html # index.html.erb
@@ -51,10 +50,10 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.json
   def create
-    @profile = Profile.new(params[:profile])
-
+    @profile = Profile.new(params[:profile]) 
+    @profile.edits = [Edit.new(:user => current_user, :action => 'create')]
     respond_to do |format|
-      if @profile.save
+      if @profile.save        
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
         format.json { render json: @profile, status: :created, location: @profile }
       else
@@ -69,7 +68,9 @@ class ProfilesController < ApplicationController
   # PUT /profiles/1.json
   def update
     @profile = Profile.find(params[:id])
-
+    
+    @profile.edits << Edit.new(:user => current_user, :action => 'update')
+    
     respond_to do |format|
       if @profile.update_attributes(params[:profile])
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
@@ -81,20 +82,19 @@ class ProfilesController < ApplicationController
     end
   end
 
-  # DELETE /profiles/1
-  # DELETE /profiles/1.json
-  def destroy     
-    @profile = Profile.find(params[:id])
-    # do not allow profiles to be destroyed right now
-    redirect_to @profile    
-    
-    @profile.destroy
-
-    respond_to do |format|
-      format.html { redirect_to profiles_url }
-      format.json { head :ok }
-    end
-  end
+  
+  # def destroy     
+  #   @profile = Profile.find(params[:id])
+  #   # do not allow profiles to be destroyed right now
+  #   redirect_to @profile    
+  #   
+  #   @profile.destroy
+  # 
+  #   respond_to do |format|
+  #     format.html { redirect_to profiles_url }
+  #     format.json { head :ok }
+  #   end
+  # end
   
   private
     

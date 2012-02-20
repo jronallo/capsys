@@ -11,22 +11,22 @@
           <li <%= 'class="active"'.html_safe if current_page?(users_path) %>>
             <%= link_to 'Users', users_path %>
           </li>
-          <li <%= 'class="active"'.html_safe if current_page?(page_about_path) %>>
-            <%= link_to 'About', page_about_path %>
+          <li <%= 'class="active"'.html_safe if current_page?(about_path) %>>
+            <%= link_to 'About', about_path %>
           </li>  
-          <li <%= 'class="active"'.html_safe if current_page?(page_curate_path) %>>
-            <%= link_to 'Curate', page_curate_path %>
+          <li <%= 'class="active"'.html_safe if current_page?(curate_path) %>>
+            <%= link_to 'Curate', curate_path %>
           </li>
-          <li <%= 'class="active"'.html_safe if current_page?(page_api_path) %>>
-            <%= link_to 'API', page_api_path %>
+          <li <%= 'class="active"'.html_safe if current_page?(api_path) %>>
+            <%= link_to 'API', api_path %>
           </li>
         </ul>        
       </div> 
       <div>
         <ul class="nav pull-right">
           <% if current_user %>
-          <li><%= link_to(image_tag(current_user.image, :class => "small-image")) if current_user.image %> </li>
-              <li><%= link_to(current_user.name)  %></li>
+          <li><%= link_to(image_tag(current_user.image, :class => "small-image"), current_user) if current_user.image %> </li>
+              <li><%= link_to current_user.name, current_user %></li>
             <li><%= link_to "Sign Out", signout_path %></li>
           <% else -%>
             <li><%= link_to "Sign in with Twitter", "/auth/twitter" %></li>

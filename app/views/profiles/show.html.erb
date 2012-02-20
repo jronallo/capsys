@@ -58,6 +58,11 @@
   </div>
 </div>
 
+<div>
+<h2>Edits</h2>
+<%= render :partial => '/edits/table', :locals => {:edits => @profile.edits} %>
+</div>
+
 <% if Rails.env == 'development' %>
   <%= debug @profile.attributes %>
 <% end -%>

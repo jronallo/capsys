@@ -10,6 +10,8 @@ class Profile
   key :categories, Array, :default => ["Unknown"]
   key :achievement_count, Integer, :default => 0
   
+  has_many :edits
+  
   has_many :achievements
   one :sitemap
   one :robotstxt

@@ -49,6 +49,8 @@ class SitemapsController < ApplicationController
     @profile = Profile.find(params[:profile_id])
     @sitemap = Sitemap.new(params[:sitemap])
     @sitemap.profile = @profile
+    @sitemap.edits = [Edit.new(:profile => @profile, :user => current_user, :achievement_id => @sitemap.id,
+      :action => 'create', :achievement_type => @sitemap.class.to_s)]
     respond_to do |format|
       if @sitemap.save
         format.html { redirect_to @profile, notice: 'Sitemap was successfully created.' }
@@ -60,33 +62,48 @@ class SitemapsController < ApplicationController
     end
   end
 
-  # PUT /sitemaps/1
-  # PUT /sitemaps/1.json
   def update
     @profile = Profile.find(params[:profile_id])
     @sitemap = @profile.sitemap
-
-    respond_to do |format|
-      if @sitemap.update_attributes(params[:sitemap])
-        format.html { redirect_to @profile, notice: 'Sitemap was successfully updated.' }
+    @sitemap.attributes = params[:sitemap]
+    if @sitemap.changed? and !params[:sitemap][:url].blank?
+      @sitemap.edits << Edit.new(:profile => @profile, :user => current_user, 
+        :achievement_id => @sitemap.id, :action => 'update', :achievement_type => @sitemap.class.to_s)
+    
+      respond_to do |format|
+        if @sitemap.save
+          format.html { redirect_to @profile, notice: 'Sitemap was successfully updated.' }
+          format.json { head :ok }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @sitemap.errors, status: :unprocesable_entity }
+        end
+      end
+    elsif params[:sitemap][:url].blank?
+      @sitemap.edits << Edit.new(:profile => @profile, :user => current_user, 
+        :achievement_id => @sitemap.id, :action => 'destroy', :achievement_type => @sitemap.class.to_s)
+      # if the url is empty then this achievement is no longer completed and ought to be removed
+      @sitemap.destroy
+      respond_to do |format|
+        format.html { redirect_to profile_path(@profile), notice: 'Sitemap Achievement was destroyed.' }
         format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @sitemap.errors, status: :unprocessable_entity }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to @profile, notice: 'Sitemap had no changes so was not updated.' }
+        format.json { head :ok }
       end
     end
   end
 
-  # DELETE /sitemaps/1
-  # DELETE /sitemaps/1.json
-  def destroy
-    @profile = Profile.find(params[:profile_id])
-    @sitemap = Sitemap.find(params[:id])
-    @sitemap.destroy
-
-    respond_to do |format|
-      format.html { redirect_to profile_path(@profile) }
-      format.json { head :ok }
-    end
-  end
+  # def destroy
+  #   @profile = Profile.find(params[:profile_id])
+  #   @sitemap = Sitemap.find(params[:id])
+  #   @sitemap.destroy
+  # 
+  #   respond_to do |format|
+  #     format.html { redirect_to profile_path(@profile) }
+  #     format.json { head :ok }
+  #   end
+  # end
 end

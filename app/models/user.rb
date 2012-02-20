@@ -10,6 +10,8 @@ class User
   key :website, String
   key :twitter, String
   
+  has_many :edits
+  
   def self.create_with_omniauth(auth)
     info = auth['info']
     new_user = {

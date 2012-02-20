@@ -20,7 +20,13 @@
   Website: <%= link_to @user.website, @user.website, :rel => 'nofollow' %>
 </p>
 
+<% if !@user.edits.blank? %>
+<h2>Edits</h2>
+<%= render :partial => '/edits/table', :locals => {:edits => @user.edits} %>
+<% end -%>
+
 
 <% if Rails.env == 'development' %>
   <%= debug @user %>
+  <%= debug @user.edits.map{|edit| edit} %>
 <% end -%>
