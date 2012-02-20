@@ -21,7 +21,7 @@
 </p>
 
 <% if !@user.edits.blank? %>
-<h2>Edits</h2>
+<h2>Edits (<%= @user.edits.count %>)</h2>
 <%= render :partial => '/edits/table', :locals => {:edits => @user.edits} %>
 <% end -%>
 
