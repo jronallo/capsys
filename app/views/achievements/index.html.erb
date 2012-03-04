@@ -1,0 +1,16 @@
+<div class="row">
+  <h1>Achievements</h1>
+  <p>
+    Achievements are ways to improve digital collections, especially on the open
+    Web. When a collection completes an Achievement the content becomes more
+    discoverable.
+  </p>
+</div>
+
+<% @achievements.each do |achievement| %>
+<div class="row">
+  <h2><%= achievement.name_title %></h2>
+  <%= render :partial => "/#{achievement.to_s.parameterize.pluralize}/description" %>
+</div>
+
+<% end -%>

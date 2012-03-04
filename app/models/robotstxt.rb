@@ -3,4 +3,8 @@ class Robotstxt < Achievement
   
   key :text
   
+  def self.name_title
+    'Robots.txt'
+  end
+  
 end

@@ -1,5 +1,9 @@
 module ApplicationHelper 
   
+  def app_name
+    'Collection Achievements and Profiles System'
+  end
+  
   def incomplete_achievements(profile)
     Achievement.subclasses.select do |klazz|
       true if !profile.send(klazz.to_s.parameterize)

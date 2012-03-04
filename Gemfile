@@ -20,6 +20,8 @@ gem 'omniauth-twitter'
 
 gem 'addressable', :require => ["addressable/uri"]
 
+gem 'resque'
+
 gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
 
 # Gems used only for assets and not required
