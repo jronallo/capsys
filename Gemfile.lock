@@ -214,6 +214,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  addressable
   anjlab-bootstrap-rails (>= 2.0)
   bson_ext
   coffee-rails (~> 3.2.1)

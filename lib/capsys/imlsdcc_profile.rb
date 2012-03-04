@@ -18,6 +18,15 @@ module Capsys
       fields
     end
     
+    def vcard
+      vcard_xml = @doc.xpath('//vcard:VCARD/vcard:ADR/..', namespaces)
+      fields = []
+      vcard_xml.xpath('*').each do |child|
+        puts child.name
+      end
+      fields
+    end
+    
     protected
     
     def namespaces
@@ -25,7 +34,8 @@ module Capsys
       'imlsdccProf' => "http://imlsdcc.grainger.uiuc.edu/profile#",
       'dcterms' => "http://purl.org/dc/terms/",
       'dc' => "http://purl.org/dc/elements/1.1/",
-      'xsi'=>"http://www.w3.org/2001/XMLSchema-instance"
+      'xsi'=>"http://www.w3.org/2001/XMLSchema-instance",
+      'vcard' => 'http://www.w3.org/2001/vcard-rdf/3.0#'
     }
     end
   end

@@ -18,6 +18,7 @@ gem 'thin'
 gem 'omniauth'
 gem 'omniauth-twitter'
 
+gem 'addressable', :require => ["addressable/uri"]
 
 gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
 

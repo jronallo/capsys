@@ -50,21 +50,39 @@
           </ul>
         <% end -%>
       </div>
+      <div></div>
     </div>
     <div>
       <p>Created At: <%= @profile.created_at %></p>
       <p>Updated At: <%= @profile.updated_at %></p>
     </div>
+    <div>
+      <h3>Searches on this collection</h3>
+      <p>Check how much of this collection is indexed by the search engines with a "site:" search.</p>
+      <ul>
+        <li><%= google_web_link(@profile) %></li>
+        <li><%= google_image_link(@profile) %></li>
+        <li><%= google_video_link(@profile) %></li>
+        <li><%= bing_web_link(@profile) %></li>
+        <li><%= bing_image_link(@profile) %></li>
+        
+      </ul>
+    </div>
   </div>
 </div>
 
+<% if !@profile.edits.blank? %>
 <div>
 <h2>Edits</h2>
 <%= render :partial => '/edits/table', :locals => {:edits => @profile.edits} %>
 </div>
+<% end -%>
 
 <% if Rails.env == 'development' %>
+<div class="row">
+  <br><br><br><br><br><br>
   <%= debug @profile.attributes %>
+</div>
 <% end -%>
 
 

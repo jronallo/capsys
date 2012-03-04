@@ -28,6 +28,16 @@ class Profile
     super.merge(:achievements => json_achievements)
   end
   
+  def search_url
+    uri = Addressable::URI.parse url
+    path = if File.split(uri.path).last.include?('.')
+      File.split(uri.path).first
+    else
+      uri.path
+    end
+    File.join(uri.host, path)
+  end
+  
   private
   
   def update_achievement_count
